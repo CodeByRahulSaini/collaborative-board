@@ -1,0 +1,110 @@
+.App {
+    background: hsla(211, 66%, 87%, 1);
+
+    background: linear-gradient(
+        90deg,
+        hsla(211, 66%, 87%, 1) 0%,
+        hsla(348, 67%, 88%, 1) 50%,
+        hsla(272, 26%, 72%, 1) 100%
+    );
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C9DEF4", endColorstr="#F5CCD4", GradientType=1 );
+
+    height: 100vh;
+    width: 100%;
+    padding: 3em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    backdrop-filter: blur(14px);
+    padding: 10px 8px;
+    background-color: rgb(255 255 255 / 47%);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    /* right: 0;
+    background-color: rgb(255 255 255 / 47%);
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    backdrop-filter: blur(14px);
+    padding: 10px 20px; */
+}
+
+.footer a {
+    color: gray;
+}
+.nav-button {
+    padding: 0px 10px;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+button:active {
+    color: white;
+}
+
+input {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+canvas {
+    background-color: #c0c2c9;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+}
+
+.tools {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+input {
+    margin: 0 5px;
+}
+
+span {
+    font-size: 1.3em;
+}
+
+.toolbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 10px 10px;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    backdrop-filter: blur(14px);
+    background-color: rgb(255 255 255 / 47%);
+}
+
+@media screen and (max-width: 600px) {
+    .tools {
+        flex-direction: column;
+        align-items: start;
+    }
+}
