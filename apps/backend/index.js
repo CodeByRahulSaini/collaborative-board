@@ -16,6 +16,7 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT || 5001;
+
 // Event handler for when a client connects to the server
 io.on("connection", function (socket) {
   // Event handler for when a client joins a room
@@ -42,11 +43,3 @@ io.on("connection", function (socket) {
 server.listen(PORT, () => {
   console.log(`server running at http://localhost:${PORT}`);
 });
-
-// httpServer.listen(PORT, () => {
-//   console.log(`Listening on port ${PORT}`);
-// });
-
-// httpServer.on("request", (req, res) => {
-//   res.end("Hello world!");
-// });
