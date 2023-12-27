@@ -1,5 +1,5 @@
 export default {
-    socketUrl: 'http://localhost:5001',
+    socketUrl: 'http://collaborative-board-backend.vercel.app',
     defaultCanvasStyle: {
         color: 'black',
         brushSize: 10,
