@@ -23,11 +23,12 @@ io.on("connection", function (socket) {
 
   // Event handler for when a client requests a redo action to be performed by other clients in the same room
   socket.on("redo", (room) => {
-    socket.to(room).emit("undo");
+    socket.to(room).emit("redo");
   });
 });
 
 const PORT = 5001;
 io.listen(PORT);
 
+module.exports = io;
 console.log(`Listening on port ${PORT}`);

@@ -19,8 +19,8 @@ const Canvas = () => {
         <>
             <canvas
                 ref={canvasRef}
-                width={windowSize[0] > 600 ? 1000 : 300}
-                height={windowSize[1] > 400 ? 700 : 200}
+                width={windowSize[0] >1000 ? 1200 : windowSize[0]-100}
+                height={600}
             />
             <Toolbar
                 setDrawingMode={setDrawingMode}

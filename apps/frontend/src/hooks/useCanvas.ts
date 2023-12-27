@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 // import io, { Socket } from 'socket.io-client';
-import CanvasUtil from '../utils/Canvas';
+import CanvasUtil from '../utils/canvas.util';
 import consts, { DrawingMode } from '../consts';
 import * as socketIo from 'socket.io-client';
 
@@ -19,7 +19,7 @@ const useCanvas = () => {
     const Canvas = useMemo(() => new CanvasUtil(), []);
     const socket = useRef<socketIo.Socket | null>(null);
     const [drawingMode, setDrawingMode] = useState(DrawingMode.FreeForm);
-    const socketRoom = window.location.href.split('/').pop();
+    const socketRoom = new URLSearchParams(window.location.search).get('r');
 
     useEffect(() => {
         if (canvasRef?.current) {

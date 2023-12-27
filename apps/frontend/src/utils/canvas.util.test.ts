@@ -1,4 +1,4 @@
-import CanvasUtil from './Canvas';
+import CanvasUtil from './canvas.util';
 
 describe('CanvasUtil', () => {
     // Can set last X and Y coordinates

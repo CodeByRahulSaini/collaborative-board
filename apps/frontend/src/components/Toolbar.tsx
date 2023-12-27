@@ -51,7 +51,7 @@ const Toolbar = ({
                 onChange={(e) => setBrushSize(Number(e.target.value))}
             />
             {tools.map((tool) => (
-                <button className="tool" onClick={tool.onClick}>
+                <button key={tool.name} className="tool" onClick={tool.onClick}>
                     <tool.Icon size={20} />
                 </button>
             ))}

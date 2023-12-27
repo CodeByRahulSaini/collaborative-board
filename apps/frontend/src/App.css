@@ -30,12 +30,7 @@
 
 .footer {
     position: fixed;
-    bottom: 0;
-    /* right: 0;
-    background-color: rgb(255 255 255 / 47%);
-    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
-    backdrop-filter: blur(14px);
-    padding: 10px 20px; */
+    bottom: 0.5rem;
 }
 
 .footer a {
@@ -64,6 +59,7 @@ canvas {
     background-color: #c0c2c9;
     border-radius: 15px 15px 0 0;
     box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    
 }
 
 .tools {

@@ -4,14 +4,14 @@ import { RiAiGenerate } from 'react-icons/ri';
 
 const Header: React.FC = () => {
     useEffect(() => {
-        if (window.location.pathname === '/') {
+        if (new URLSearchParams(window.location.search).size === 0) {
             window.location.href = generateNewUrl();
         }
     });
 
     const generateNewUrl = () => {
         const uniqueNumber = Date.now() + Math.floor(Math.random() * 100); // Generate a unique number
-        const newUrl = `${window.location.origin}/${uniqueNumber}`; // Create the new URL
+        const newUrl = `${window.location.origin}?r=${uniqueNumber}`; // Create the new URL
         return newUrl;
     };
 

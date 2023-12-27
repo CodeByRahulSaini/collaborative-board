@@ -4,7 +4,7 @@ export default {
         color: 'black',
         brushSize: 10,
     },
-    githubUrl: '',
+    githubUrl: 'https://github.com/CodeByRahulSaini/collaborative-board.git',
 } as const;
 
 export enum DrawingMode {
