@@ -1,9 +1,17 @@
+const express = require("express");
+const { createServer } = require("http");
 const { Server } = require("socket.io");
 
-const io = new Server({
-  cors: "http://localhost:5173/",
+const app = express();
+const server = createServer(app);
+
+const io = new Server(server, { cors: { origin: "*" } });
+
+app.get("/", (req, res) => {
+  res.send("Hello world!");
 });
 
+const PORT = process.env.PORT || 5001;
 // Event handler for when a client connects to the server
 io.on("connection", function (socket) {
   // Event handler for when a client joins a room
@@ -27,8 +35,14 @@ io.on("connection", function (socket) {
   });
 });
 
-const PORT = 5001;
-io.listen(PORT);
+server.listen(PORT, () => {
+  console.log(`server running at http://localhost:${PORT}`);
+});
 
-module.exports = io;
-console.log(`Listening on port ${PORT}`);
+// httpServer.listen(PORT, () => {
+//   console.log(`Listening on port ${PORT}`);
+// });
+
+// httpServer.on("request", (req, res) => {
+//   res.end("Hello world!");
+// });
