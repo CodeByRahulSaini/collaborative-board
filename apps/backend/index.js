@@ -7,7 +7,7 @@ const server = createServer(app);
 
 const io = new Server(server, {
   cors: { origin: "*" },
-  transports: ["websocket"],
+  transports: ["websocket", "polling"],
   secure: process.env.NODE_ENV === "production",
 });
 
