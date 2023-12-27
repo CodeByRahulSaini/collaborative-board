@@ -1,5 +1,5 @@
 export default {
-    socketUrl: 'https://collaborative-board-backend.vercel.app',
+    socketUrl: import.meta.env.VITE_SOCKET_URL,
     defaultCanvasStyle: {
         color: 'black',
         brushSize: 10,
