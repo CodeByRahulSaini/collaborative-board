@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node index.js",
-    "build": "node index.js",
+    "build": "NODE_ENV=production node index.js",
     "test": "jest"
   },
   "author": "",
