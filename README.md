@@ -8,6 +8,7 @@ This is collaborative board where users can draw on a shared board. The drawings
 - Ability to draw free-form lines on the board.
 - Undo and redo functionality.
 - Private Rooms.
+- Added support for drawing with touches in mobile devices.
 
 ## Demo
 
