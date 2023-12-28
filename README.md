@@ -12,7 +12,12 @@ This is collaborative board where users can draw on a shared board. The drawings
 
 ## Demo
 
-![Preview](preview.gif?raw=true "Preview")
+Live Demo: https://collaborative-board.vercel.app
+
+Open [this](https://collaborative-board.vercel.app?r=2342342334343) in two tabs or windows of your browser. Draw anything on any canvas, they should auto-sync with each others.
+
+
+![Preview](preview.gif "Preview")
 
 ## Installation
 
