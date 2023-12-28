@@ -59,18 +59,20 @@ canvas {
     background-color: #c0c2c9;
     border-radius: 15px 15px 0 0;
     box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
-    
+    width:100%;
 }
 
-.tools {
+.toolbar-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    padding: 6px 0;
+}
+
+.tool {
+    flex: 1;
     align-items: center;
-    width: 100%;
-    padding: 1em;
-    background-color: black;
-    color: white;
+    display: flex;
+    justify-content: center;
 }
 
 h1 {

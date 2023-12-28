@@ -54,11 +54,18 @@ const useCanvas = () => {
         canvas?.addEventListener('mouseup', endDrawing);
         canvas?.addEventListener('mousemove', handleDrawing);
 
+        canvas?.addEventListener('touchstart', startTouchDrawing);
+        canvas?.addEventListener('touchend', endDrawing);
+        canvas?.addEventListener('touchmove', handleTouchDrawing);
+
         return () => {
             _socket?.disconnect();
             canvas?.removeEventListener('mousedown', startDrawing);
             canvas?.removeEventListener('mouseup', endDrawing);
             canvas?.removeEventListener('mousemove', handleDrawing);
+            canvas?.removeEventListener('touchstart', startTouchDrawing);
+            canvas?.removeEventListener('touchend', endDrawing);
+            canvas?.removeEventListener('touchmove', handleTouchDrawing);
         };
     });
 
@@ -88,6 +95,24 @@ const useCanvas = () => {
                 break;
         }
     };
+
+    const startTouchDrawing = (e: TouchEvent) => { 
+        startDrawing(getTouchPos(e))
+    }
+   
+    const handleTouchDrawing = (e: TouchEvent) => { 
+        // e.preventDefault()
+        handleDrawing(getTouchPos(e))
+    }
+
+    // Get the position of a touch relative to the canvas
+function getTouchPos(touchEvent) {
+    const rect = canvasRef?.current?.getBoundingClientRect();
+    return {
+        offsetX: touchEvent.touches[0].clientX - rect?.left,
+        offsetY: touchEvent.touches[0].clientY - rect?.top
+    };
+  }
 
     const startDrawing = (e: { offsetX: number; offsetY: number }) => {
         Canvas.startDrawing(e);

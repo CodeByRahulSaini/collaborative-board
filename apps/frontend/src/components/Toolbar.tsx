@@ -38,11 +38,15 @@ const Toolbar = ({
 
     return (
         <div className="toolbar-container">
-            <input
-                type="color"
-                defaultValue={consts.defaultCanvasStyle.color}
-                onChange={(e) => setBrushColor(e.target.value)}
-            />
+            <div className="tool">
+                <input
+                    type="color"
+                    defaultValue={consts.defaultCanvasStyle.color}
+                    onChange={(e) => setBrushColor(e.target.value)}
+                />
+            </div>
+            <div className="tool">
+
             <input
                 defaultValue={consts.defaultCanvasStyle.brushSize}
                 type="range"
@@ -50,6 +54,8 @@ const Toolbar = ({
                 max="100"
                 onChange={(e) => setBrushSize(Number(e.target.value))}
             />
+            </div>
+
             {tools.map((tool) => (
                 <button key={tool.name} className="tool" onClick={tool.onClick}>
                     <tool.Icon size={20} />

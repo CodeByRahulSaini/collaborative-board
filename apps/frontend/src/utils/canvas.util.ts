@@ -91,7 +91,6 @@ class CanvasUtil {
     drawFreeForm(offsetX: number, offsetY: number) {
         if (this.ctx && this.drawingEnabled) {
             this.ctx.lineCap = 'round';
-            this.ctx.lineJoin = 'round';
             this.ctx.lineTo(offsetX, offsetY);
             this.ctx.stroke();
         }
@@ -125,7 +124,7 @@ class CanvasUtil {
     }
 
     // Clears the canvas
-    clearCanvas() {
+    clearCanvas(clearHistory = true) {
         if (this.ctx) {
             this.ctx.clearRect(
                 0,
@@ -133,8 +132,10 @@ class CanvasUtil {
                 this.canvasRef?.width ?? 0,
                 this.canvasRef?.height ?? 0,
             );
-            this.canvasHistory = [''];
-            this.currentHistoryStep = -1;
+            if(clearHistory){
+                this.canvasHistory = [''];
+                this.currentHistoryStep = -1;
+            }
         }
     }
 
@@ -163,7 +164,7 @@ class CanvasUtil {
             this.drawImage(this.canvasHistory[this.currentHistoryStep]);
         } else if (this.currentHistoryStep === 0) {
             this.currentHistoryStep -= 1;
-            this.clearCanvas();
+            this.clearCanvas(false);
         }
     }
 
