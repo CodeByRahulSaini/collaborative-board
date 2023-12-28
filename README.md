@@ -34,7 +34,6 @@ Using Yarn:
 
 ## Start both frontend and backend
 
-``
 Using npm:
 
 ```bash

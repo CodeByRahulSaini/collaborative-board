@@ -13,12 +13,11 @@ Using npm:
 Using Yarn:
 
 ```bash
-  yarn
+    yarn
 ```
 
 ## Start
 
-``
 Using npm:
 
 ```bash

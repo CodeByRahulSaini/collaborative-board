@@ -22,7 +22,6 @@ Using Yarn:
 
 ## Start
 
-``
 Using npm:
 
 ```bash
