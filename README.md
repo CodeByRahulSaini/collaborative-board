@@ -16,7 +16,6 @@ Live Demo: https://collaborative-board.vercel.app
 
 Open [this](https://collaborative-board.vercel.app?r=2342342334343) in two tabs or windows of your browser. Draw anything on any canvas, they should auto-sync with each others.
 
-
 ![Preview](preview.gif "Preview")
 
 ## Installation
@@ -33,8 +32,9 @@ Using Yarn:
   yarn
 ```
 
-## Quick Start
+## Start both frontend and backend
 
+``
 Using npm:
 
 ```bash
